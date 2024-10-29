@@ -1,34 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import './styles.css'
 import 'em-button'
+import 'em-nametag'
+import '@novacat35/lit-web-components'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  function resetPage() {
+    console.log('reset me');
+  }
 
   return (
-    <>
+    <> <h1>Vite + React + Novacat + EmGore</h1>
+    <div className='layoutHor'>
+      <custom-form></custom-form>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <em-nametag id="nametag" firstName="Emily"></em-nametag>
+        <em-button class="primary" onClick={resetPage}>Reset page</em-button>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <em-button onClick={() => setCount((count) => count + 1)} class='outlined'>
-          count is {count}
-        </em-button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    </div> 
+    
     </>
   )
 }
