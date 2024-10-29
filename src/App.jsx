@@ -2,7 +2,6 @@ import './App.css'
 import './styles.css'
 import 'em-button'
 import 'em-nametag'
-import '@novacat35/lit-web-components'
 import { useState } from 'react'
 
 function App() {
@@ -28,7 +27,7 @@ function App() {
 
   return (
     <> 
-    <h1>Vite + React + Novacat + EmGore</h1>
+    <h1>Welcome</h1>
     <div className='layoutHor'>
       <div>
         <div>Please sign in</div>
